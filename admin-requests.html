@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문의관리 | 화성광림</title>
+    <script>
+      if (localStorage.getItem("hw_admin_logged_in") !== "true") {
+        location.replace("./admin-login.html");
+      }
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-requires-admin="true">
+    <header class="site-header solid-header">
+      <a class="brand" href="./index.html" aria-label="화성광림 홈">
+        <span class="brand-mark">HK</span>
+        <span>
+          <strong>화성광림</strong>
+          <small>KWANGLIM DEALER</small>
+        </span>
+      </a>
+      <button class="menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-nav" aria-label="주요 메뉴"></nav>
+      <a class="header-call" href="tel:031-354-4482">상담문의 031-354-4482</a>
+    </header>
+
+    <main class="sub-page" data-admin-panel>
+      <section class="page-hero compact-hero">
+        <div class="section-shell">
+          <p class="section-kicker">ADMIN</p>
+          <h1>문의관리</h1>
+          <p>문의 또는 상담예약으로 접수된 내용을 카테고리별로 확인하고 삭제할 수 있습니다.</p>
+        </div>
+      </section>
+
+      <section class="section-shell admin-request-shell">
+        <div class="request-filter-bar" role="tablist" aria-label="문의 카테고리">
+          <button type="button" class="is-active" data-request-filter="전체">전체</button>
+          <button type="button" data-request-filter="구매 상담">구매상담</button>
+          <button type="button" data-request-filter="중고 매물 문의">중고매물문의</button>
+          <button type="button" data-request-filter="정비 상담">정비상담</button>
+        </div>
+        <div class="request-list" data-admin-requests></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"></footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

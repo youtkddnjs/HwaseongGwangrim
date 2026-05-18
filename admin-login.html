@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>관리자 로그인 | 화성광림</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header solid-header">
+      <a class="brand" href="./index.html" aria-label="화성광림 홈">
+        <span class="brand-mark">HK</span>
+        <span>
+          <strong>화성광림</strong>
+          <small>KWANGLIM DEALER</small>
+        </span>
+      </a>
+      <button class="menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-nav" aria-label="주요 메뉴">
+        <a href="./index.html#products">제품</a>
+        <a href="./inventory.html">중고 매물</a>
+        <a href="./index.html#service">상담/정비</a>
+        <a href="./index.html#contact">오시는 길</a>
+        <a class="admin-only" href="./admin-new.html">매물등록</a>
+        <a class="auth-link" href="./admin-login.html">관리자 로그인</a>
+      </nav>
+      <a class="header-call" href="tel:010-0000-0000">상담문의 010-0000-0000</a>
+    </header>
+
+    <main class="sub-page auth-page">
+      <section class="auth-box">
+        <p class="section-kicker">ADMIN</p>
+        <h1>관리자 로그인</h1>
+        <p>현재 단계에서는 데모 로그인입니다. 실제 배포 시 서버 인증으로 교체하면 됩니다.</p>
+        <form class="admin-login-form">
+          <label>
+            <span>아이디</span>
+            <input name="id" type="text" value="admin" autocomplete="username" />
+          </label>
+          <label>
+            <span>비밀번호</span>
+            <input name="password" type="password" value="1234" autocomplete="current-password" />
+          </label>
+          <button class="primary-button" type="submit">로그인</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

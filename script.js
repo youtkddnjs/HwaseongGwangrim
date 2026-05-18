@@ -1,6 +1,7 @@
 const STORAGE_KEY = "hw_listings";
 const AUTH_KEY = "hw_admin_logged_in";
 const REQUEST_KEY = "hw_service_requests";
+const NEW_ALERT_KEY = "hw_hide_new_alert";
 
 const company = {
   name: "화성광림(주)",
@@ -68,6 +69,60 @@ const baseListings = [
     description:
       "중량물 인양과 장거리 운행을 함께 고려한 카고크레인 매물입니다. 작업 반경과 장비 용량은 상담 시 확인 가능합니다.",
   },
+  {
+    id: "grab-25-compact",
+    title: "2.5톤 광림 집게차 소형",
+    type: "집게차",
+    ton: "2.5톤",
+    year: "2021년",
+    mileage: "64,000km",
+    price: "상담문의",
+    status: "판매중",
+    image:
+      "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=1000&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1506306460327-3164753b74c7?auto=format&fit=crop&w=1000&q=80",
+    ],
+    description:
+      "소형 현장과 좁은 진입로 운행에 적합한 2.5톤급 집게차입니다. 실제 차량 상태와 장비 사양은 상담 시 안내합니다.",
+  },
+  {
+    id: "grab-5t-auto",
+    title: "5톤 집게차 자동덮개 사양",
+    type: "집게차",
+    ton: "5톤",
+    year: "2017년",
+    mileage: "176,000km",
+    price: "상담문의",
+    status: "판매중",
+    image:
+      "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?auto=format&fit=crop&w=1000&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1000&q=80",
+    ],
+    description:
+      "자동덮개 사양을 갖춘 5톤 집게차 매물입니다. 폐기물, 고철, 조경 현장 운행에 맞춰 확인 가능합니다.",
+  },
+  {
+    id: "special-35",
+    title: "3.5톤 특장 작업차",
+    type: "특장차",
+    ton: "3.5톤",
+    year: "2022년",
+    mileage: "51,000km",
+    price: "상담문의",
+    status: "입고예정",
+    image:
+      "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1000&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1621929747188-0b4dc28498d2?auto=format&fit=crop&w=1000&q=80",
+    ],
+    description:
+      "현장 작업용 특장 구성 매물입니다. 적재함 구성과 작업 장비 상태는 실차 확인 후 자세히 안내합니다.",
+  },
 ];
 
 const newTruckListings = [
@@ -128,6 +183,60 @@ const newTruckListings = [
     description:
       "중량물 인양, 적재, 현장 이동 조건을 기준으로 카고크레인 신차 사양을 상담합니다. 크레인 용량과 작업 반경을 함께 검토합니다.",
   },
+  {
+    id: "new-special-body",
+    title: "광림 특장차 맞춤 제작 상담",
+    type: "특장차",
+    ton: "맞춤 상담",
+    year: "신차",
+    mileage: "0km",
+    price: "견적 상담",
+    status: "신차상담",
+    image:
+      "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?auto=format&fit=crop&w=1000&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1000&q=80",
+    ],
+    description:
+      "작업 목적에 맞춰 적재함, 보조 장치, 장비 구성을 검토하는 특장차 신차 상담입니다.",
+  },
+  {
+    id: "new-grab-8t",
+    title: "광림 8톤 이상 대형 집게차 상담",
+    type: "집게차",
+    ton: "8톤 이상",
+    year: "신차",
+    mileage: "0km",
+    price: "견적 상담",
+    status: "신차상담",
+    image:
+      "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1000&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1621929747188-0b4dc28498d2?auto=format&fit=crop&w=1000&q=80",
+    ],
+    description:
+      "대형 적재와 고하중 작업을 고려한 8톤 이상 집게차 신차 상담입니다. 현장 조건에 맞춰 사양을 검토합니다.",
+  },
+  {
+    id: "new-crane-light",
+    title: "소형 카고크레인 신차 상담",
+    type: "카고크레인",
+    ton: "3.5톤",
+    year: "신차",
+    mileage: "0km",
+    price: "견적 상담",
+    status: "신차상담",
+    image:
+      "https://images.unsplash.com/photo-1506306460327-3164753b74c7?auto=format&fit=crop&w=1000&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1506306460327-3164753b74c7?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=1000&q=80",
+    ],
+    description:
+      "도심 작업과 소형 인양 작업에 적합한 카고크레인 신차 상담입니다. 차체 크기와 장비 용량을 함께 비교합니다.",
+  },
 ];
 
 const currentFile = window.location.pathname.split("/").pop() || "index.html";
@@ -135,7 +244,6 @@ const header = document.querySelector(".site-header");
 const menuButton = document.querySelector(".menu-button");
 
 const isAdmin = () => localStorage.getItem(AUTH_KEY) === "true";
-
 const escapeHtml = (value) =>
   String(value)
     .replace(/&/g, "&amp;")
@@ -314,7 +422,7 @@ const renderListings = () => {
   let listings = getListings();
   if (typeFilter) listings = listings.filter((item) => item.type === typeFilter);
   if (tonFilter) listings = listings.filter((item) => item.ton === tonFilter);
-  if (mode === "featured") listings = listings.slice(0, 3);
+  if (mode === "featured") listings = listings.slice(0, 8);
 
   container.innerHTML = listings.length
     ? listings.map(listingCard).join("")
@@ -598,6 +706,22 @@ const bindAdminRequests = () => {
   renderAdminRequests();
 };
 
+const bindNewAlert = () => {
+  const alert = document.querySelector("[data-new-alert]");
+  if (!alert) return;
+
+  if (localStorage.getItem(NEW_ALERT_KEY) === "true") {
+    alert.remove();
+    return;
+  }
+
+  alert.classList.add("is-visible");
+  alert.querySelector("[data-dismiss-new-alert]")?.addEventListener("click", () => {
+    localStorage.setItem(NEW_ALERT_KEY, "true");
+    alert.remove();
+  });
+};
+
 window.addEventListener("pageshow", () => {
   if (document.body.dataset.requiresAdmin === "true" && !isAdmin()) {
     window.location.replace("./admin-login.html");
@@ -625,6 +749,7 @@ bindFilters();
 bindAdminForm();
 bindRequestForm();
 bindAdminRequests();
+bindNewAlert();
 renderListings();
 renderNewListings();
 renderDetail();

@@ -47,6 +47,11 @@
             <a class="primary-button" href="./new-trucks.html">신차 상담</a>
             <a class="secondary-button" href="#used">보유 매물 보기</a>
           </div>
+          <div class="hero-stats" aria-label="화성광림 핵심 안내">
+            <div><strong>신차</strong><span>광림 공식 상담</span></div>
+            <div><strong>중고</strong><span>사진 기반 실매물</span></div>
+            <div><strong>출고</strong><span>이전·탁송 안내</span></div>
+          </div>
         </div>
         <div class="hero-panel" aria-label="신차 및 중고 매물 검색">
           <strong>신차·중고 빠른 상담</strong>
@@ -75,11 +80,35 @@
         </div>
       </section>
 
+      <section class="main-paths section-shell" aria-label="신차와 보유매물 바로가기">
+        <a class="path-card path-new" href="./new-trucks.html">
+          <span>NEW</span>
+          <strong>신차 상담</strong>
+          <em>광림 집게차·카고크레인 사양 상담</em>
+        </a>
+        <a class="path-card path-used" href="./inventory.html">
+          <span>STOCK</span>
+          <strong>보유 매물</strong>
+          <em>등록된 사진과 상세 정보 확인</em>
+        </a>
+      </section>
+
+      <section class="inventory-band new-dashboard" id="new">
+        <div class="section-shell inventory-head">
+          <div>
+            <p class="section-kicker">NEW TRUCKS</p>
+            <h2>광림 신차 상담 라인업</h2>
+          </div>
+          <a href="./new-trucks.html" class="text-link">신차 전체보기</a>
+        </div>
+        <div class="section-shell inventory-grid" data-new-listings aria-label="신차 상담 목록"></div>
+      </section>
+
       <section class="inventory-band" id="used">
         <div class="section-shell inventory-head">
           <div>
-            <p class="section-kicker">NEW & USED TRUCKS</p>
-            <h2>신차 상담과 보유 중고 매물</h2>
+            <p class="section-kicker">STOCK TRUCKS</p>
+            <h2>보유 중고 매물</h2>
           </div>
           <div class="head-actions">
             <a href="./admin-new.html" class="outline-link admin-only">매물등록</a>
@@ -104,6 +133,18 @@
         <a class="primary-button compact" href="./service.html">문의 또는 상담예약</a>
       </section>
     </main>
+
+    <aside class="new-alert" data-new-alert aria-label="신차 안내 배너">
+      <div>
+        <span>NEW</span>
+        <strong>광림 신차 상담 라인업이 업데이트되었습니다.</strong>
+        <p>집게차, 카고크레인, 특장차 신차 사양을 확인하고 상담 예약을 남겨보세요.</p>
+      </div>
+      <div class="new-alert-actions">
+        <a class="primary-button compact" href="./new-trucks.html">신차 보기</a>
+        <button type="button" data-dismiss-new-alert>다시 보지 않음</button>
+      </div>
+    </aside>
 
     <footer class="site-footer"></footer>
     <script src="./script.js"></script>
